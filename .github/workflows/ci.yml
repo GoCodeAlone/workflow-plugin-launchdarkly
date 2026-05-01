@@ -17,6 +17,8 @@ jobs:
 
   wfctl-strict-contracts:
     runs-on: [self-hosted, Linux, X64]
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
