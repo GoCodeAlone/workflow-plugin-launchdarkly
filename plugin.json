@@ -8,18 +8,12 @@
     "tier": "community",
     "private": false,
     "minEngineVersion": "0.3.30",
-    "keywords": [
-        "launchdarkly",
-        "feature-flags",
-        "feature-management"
-    ],
+    "keywords": ["launchdarkly", "feature-flags", "feature-management"],
     "homepage": "https://github.com/GoCodeAlone/workflow-plugin-launchdarkly",
     "repository": "https://github.com/GoCodeAlone/workflow-plugin-launchdarkly",
     "capabilities": {
         "configProvider": false,
-        "moduleTypes": [
-            "launchdarkly.provider"
-        ],
+        "moduleTypes": ["launchdarkly.provider"],
         "stepTypes": [
             "step.launchdarkly_flag_list",
             "step.launchdarkly_flag_get",
