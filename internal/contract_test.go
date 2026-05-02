@@ -3,6 +3,7 @@ package internal
 import (
 	"encoding/json"
 	"os"
+	"path/filepath"
 	"testing"
 )
 
@@ -18,28 +19,47 @@ type pluginManifest struct {
 
 // TestContractCoverage validates that:
 //  1. Every step type advertised in capabilities has a corresponding step schema entry.
-//  2. The plugin implements SchemaProvider (returns at least one module schema).
+//  2. There are no duplicate step schema entries.
+//  3. There are no orphan step schema entries (schemas for unadvertised step types).
+//  4. The plugin implements SchemaProvider (returns at least one module schema).
 func TestContractCoverage(t *testing.T) {
 	// Load and parse plugin.json from the repo root.
-	data, err := os.ReadFile("../plugin.json")
+	pluginJSONPath := filepath.Join("..", "plugin.json")
+	data, err := os.ReadFile(pluginJSONPath)
 	if err != nil {
-		t.Skipf("plugin.json not found (running outside repo root?): %v", err)
+		t.Fatalf("plugin.json not found at %s: %v", pluginJSONPath, err)
 	}
 	var m pluginManifest
 	if err := json.Unmarshal(data, &m); err != nil {
 		t.Fatalf("failed to parse plugin.json: %v", err)
 	}
 
-	// Index schemas by type.
-	schemaTypes := make(map[string]bool, len(m.StepSchemas))
+	// Index schemas by type, detecting duplicates.
+	schemaTypes := make(map[string]int, len(m.StepSchemas))
 	for _, s := range m.StepSchemas {
-		schemaTypes[s.Type] = true
+		schemaTypes[s.Type]++
+		if schemaTypes[s.Type] > 1 {
+			t.Errorf("duplicate step schema entry for type %q", s.Type)
+		}
+	}
+
+	// Index capabilities step types for orphan detection.
+	capabilityTypes := make(map[string]bool, len(m.Capabilities.StepTypes))
+	for _, st := range m.Capabilities.StepTypes {
+		capabilityTypes[st] = true
 	}
 
 	// Every advertised step type must have a schema.
 	for _, st := range m.Capabilities.StepTypes {
-		if !schemaTypes[st] {
+		if schemaTypes[st] == 0 {
 			t.Errorf("step type %q is advertised in capabilities but has no step schema", st)
+		}
+	}
+
+	// Every step schema must correspond to an advertised step type (no orphans).
+	for _, s := range m.StepSchemas {
+		if !capabilityTypes[s.Type] {
+			t.Errorf("step schema for %q has no matching entry in capabilities.stepTypes (orphan schema)", s.Type)
 		}
 	}
 

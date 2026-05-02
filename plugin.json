@@ -2183,7 +2183,7 @@
                 {
                     "key": "executionDate",
                     "label": "Execution Date",
-                    "type": "string",
+                    "type": "number",
                     "description": "Scheduled execution date/time (ms epoch)",
                     "required": true
                 },
