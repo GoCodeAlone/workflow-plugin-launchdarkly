@@ -1,0 +1,520 @@
+{
+  "version": "1",
+  "contracts": [
+    {
+      "kind": "module",
+      "type": "launchdarkly.provider",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_flag_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_flag_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_flag_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_flag_update",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_flag_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_flag_copy",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_flag_status_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_flag_status_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_project_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_project_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_project_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_project_update",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_project_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_environment_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_environment_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_environment_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_environment_update",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_environment_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_environment_reset_sdk_key",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_environment_reset_mobile_key",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_segment_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_segment_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_segment_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_segment_update",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_segment_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_context_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_context_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_context_search",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_context_kind_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_context_kind_upsert",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_context_evaluate",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_metric_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_metric_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_metric_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_metric_update",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_metric_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_experiment_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_experiment_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_experiment_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_experiment_update",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_experiment_results_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_approval_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_approval_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_approval_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_approval_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_approval_apply",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_approval_review",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_scheduled_change_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_scheduled_change_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_scheduled_change_update",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_scheduled_change_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_trigger_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_trigger_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_trigger_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_trigger_update",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_trigger_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_workflow_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_workflow_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_workflow_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_workflow_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_audit_log_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_audit_log_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_member_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_member_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_member_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_member_update",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_member_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_team_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_team_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_team_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_team_update",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_team_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_role_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_role_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_role_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_role_update",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_role_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_token_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_token_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_token_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_token_update",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_token_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_token_reset",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_webhook_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_webhook_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_webhook_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_webhook_update",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_webhook_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_relay_config_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_relay_config_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_relay_config_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_relay_config_update",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_relay_config_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_release_pipeline_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_release_pipeline_get",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_release_pipeline_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_release_pipeline_update",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_release_pipeline_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_code_ref_repo_list",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_code_ref_repo_create",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_code_ref_repo_delete",
+      "mode": "strict"
+    },
+    {
+      "kind": "step",
+      "type": "step.launchdarkly_code_ref_extinction_list",
+      "mode": "strict"
+    }
+  ]
+}
