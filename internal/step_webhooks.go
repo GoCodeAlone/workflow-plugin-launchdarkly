@@ -76,13 +76,15 @@ func (s *webhookCreateStep) Execute(ctx context.Context, _ map[string]any, _ map
 		return &sdk.StepResult{Output: map[string]any{"error": "url is required"}}, nil
 	}
 	body := map[string]any{"url": url}
-	if sign := resolveValue("sign", current, config); sign != "" {
-		body["sign"] = sign
+	if v, ok := current["sign"]; ok {
+		body["sign"] = v
+	} else if v, ok := config["sign"]; ok {
+		body["sign"] = v
 	}
-	if on, ok := current["on"]; ok {
-		body["on"] = on
-	} else if on, ok := config["on"]; ok {
-		body["on"] = on
+	if v, ok := current["on"]; ok {
+		body["on"] = v
+	} else if v, ok := config["on"]; ok {
+		body["on"] = v
 	}
 	result, err := client.doRequest(ctx, http.MethodPost, "/webhooks", body)
 	if err != nil {
