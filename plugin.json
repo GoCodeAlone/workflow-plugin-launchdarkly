@@ -1,13 +1,13 @@
 {
     "name": "workflow-plugin-launchdarkly",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "LaunchDarkly feature management plugin",
     "author": "GoCodeAlone",
     "license": "MIT",
     "type": "external",
     "tier": "community",
     "private": false,
-    "minEngineVersion": "0.3.30",
+    "minEngineVersion": "0.51.7",
     "keywords": [
         "launchdarkly",
         "feature-flags",
@@ -4210,27 +4210,27 @@
         {
             "os": "linux",
             "arch": "amd64",
-            "url": "https://github.com/GoCodeAlone/workflow-plugin-launchdarkly/releases/download/v0.1.0/workflow-plugin-launchdarkly_linux_amd64.tar.gz"
+            "url": "https://github.com/GoCodeAlone/workflow-plugin-launchdarkly/releases/download/v0.1.1/workflow-plugin-launchdarkly_linux_amd64.tar.gz"
         },
         {
             "os": "linux",
             "arch": "arm64",
-            "url": "https://github.com/GoCodeAlone/workflow-plugin-launchdarkly/releases/download/v0.1.0/workflow-plugin-launchdarkly_linux_arm64.tar.gz"
+            "url": "https://github.com/GoCodeAlone/workflow-plugin-launchdarkly/releases/download/v0.1.1/workflow-plugin-launchdarkly_linux_arm64.tar.gz"
         },
         {
             "os": "darwin",
             "arch": "amd64",
-            "url": "https://github.com/GoCodeAlone/workflow-plugin-launchdarkly/releases/download/v0.1.0/workflow-plugin-launchdarkly_darwin_amd64.tar.gz"
+            "url": "https://github.com/GoCodeAlone/workflow-plugin-launchdarkly/releases/download/v0.1.1/workflow-plugin-launchdarkly_darwin_amd64.tar.gz"
         },
         {
             "os": "darwin",
             "arch": "arm64",
-            "url": "https://github.com/GoCodeAlone/workflow-plugin-launchdarkly/releases/download/v0.1.0/workflow-plugin-launchdarkly_darwin_arm64.tar.gz"
+            "url": "https://github.com/GoCodeAlone/workflow-plugin-launchdarkly/releases/download/v0.1.1/workflow-plugin-launchdarkly_darwin_arm64.tar.gz"
         },
         {
             "os": "windows",
             "arch": "amd64",
-            "url": "https://github.com/GoCodeAlone/workflow-plugin-launchdarkly/releases/download/v0.1.0/workflow-plugin-launchdarkly_windows_amd64.zip"
+            "url": "https://github.com/GoCodeAlone/workflow-plugin-launchdarkly/releases/download/v0.1.1/workflow-plugin-launchdarkly_windows_amd64.zip"
         }
     ]
 }
