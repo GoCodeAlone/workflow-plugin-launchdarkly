@@ -8,5 +8,5 @@ import (
 var version = "dev"
 
 func main() {
-	sdk.Serve(internal.NewLaunchDarklyPlugin())
+	sdk.Serve(internal.NewLaunchDarklyPlugin(), sdk.WithBuildVersion(sdk.ResolveBuildVersion(internal.Version)))
 }
