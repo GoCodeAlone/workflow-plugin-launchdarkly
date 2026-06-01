@@ -1,6 +1,6 @@
 {
   "name": "workflow-plugin-launchdarkly",
-  "version": "0.1.1",
+  "version": "0.0.0",
   "description": "LaunchDarkly feature management plugin",
   "author": "GoCodeAlone",
   "license": "MIT",
